@@ -1,26 +1,25 @@
-# cargo sub
+# LizeLive's Rust Style Guide
 
-cargo subcrate managment
 
-## usage
 
-it's very powerful
 
-### cargo sub new
-```
-cargo sub new [name]
-```
-create a subcrate, add it to the workspace
+## architecture
+- use sub crates to help improve build speed + scache
+- use `_` for crate names eg `physics_types`
+- subcrates go into `crates/` directory
+- every subcrate has `README.md`
+- minimize symbols exposed by crates
+- lib.rs only declares modules and exposes
+- crates depend directly on what they need (avoid workspace deps)
+- avoid unsafe code. when not avoidable, create dedicated crate to help.
+- for ffi have `$name_sys` libary that is the raw FFI and `$name` that is nice wraper.
 
-detects if subcrates are ./ or ./crates/
-detects if it needs to change Cargo.toml or if it's fine
+## linter
+see `clippy.toml` and `
 
-### cargo sub sync
+## ecosystem
+- wgpu for graphics
+- serde for serlization
+- 
 
-```
-add subcrates to works
-```
-
-## features
-- auto detect convention
-- funny
+## git 

@@ -1,5 +1,7 @@
 # Require modern Rust
-msrv = "1.95"
+msrv = "1.85.0"
+
+check-private-items = true
 
 # Disallow panic-on-error methods
 disallowed-methods = [
