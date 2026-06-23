@@ -1,0 +1,15 @@
+# Require modern Rust
+msrv = "1.95"
+
+# Disallow panic-on-error methods
+disallowed-methods = [
+    "std::option::Option::unwrap",
+    "std::option::Option::expect",
+    "std::result::Result::unwrap",
+    "std::result::Result::expect",
+]
+
+# Disallow lossy conversions
+disallowed-types = [
+    "std::ffi::CString", # often misused; enforce checked creation
+]
